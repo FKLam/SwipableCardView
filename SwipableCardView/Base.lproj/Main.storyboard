@@ -1,22 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jrq-Po-Mbw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
+        <scene sceneID="7IU-vC-Uic">
+            <objects>
+                <viewController id="Jrq-Po-Mbw" customClass="InitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWX-tP-PWb"/>
+                        <viewControllerLayoutGuide type="bottom" id="R4v-Ul-2MF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="91B-rr-ZRq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" placeholder="# cards" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQB-b0-LN6">
+                                <rect key="frame" x="136" y="319" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="asj-co-1un"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-r1-mhz">
+                                <rect key="frame" x="136" y="397" width="103" height="42"/>
+                                <color key="backgroundColor" red="0.0039215688589999999" green="0.75294119120000003" blue="0.40784314269999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="TRt-Nt-dSw"/>
+                                    <constraint firstAttribute="width" constant="103" id="aPu-0N-fkK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Jrq-Po-Mbw" eventType="touchUpInside" id="nGB-cE-q7h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co5-Hk-O2s">
+                                <rect key="frame" x="136" y="200" width="103" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="OqG-g4-JQS"/>
+                                    <constraint firstAttribute="height" constant="83" id="k8b-c4-0Ri"/>
+                                </constraints>
+                                <string key="text">Enter # 
+of Cards
+(up to 20)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zQB-b0-LN6" firstAttribute="centerX" secondItem="91B-rr-ZRq" secondAttribute="centerX" id="0E8-jW-wry"/>
+                            <constraint firstItem="Eat-r1-mhz" firstAttribute="centerX" secondItem="91B-rr-ZRq" secondAttribute="centerX" id="2BE-eb-tD5"/>
+                            <constraint firstItem="Eat-r1-mhz" firstAttribute="centerY" secondItem="91B-rr-ZRq" secondAttribute="centerY" constant="84.5" id="KaA-Tw-YfB"/>
+                            <constraint firstItem="zQB-b0-LN6" firstAttribute="centerY" secondItem="91B-rr-ZRq" secondAttribute="centerY" id="LlK-PC-3Ks"/>
+                            <constraint firstItem="co5-Hk-O2s" firstAttribute="centerX" secondItem="91B-rr-ZRq" secondAttribute="centerX" id="h1Z-zE-bs4"/>
+                            <constraint firstItem="co5-Hk-O2s" firstAttribute="centerY" secondItem="91B-rr-ZRq" secondAttribute="centerY" constant="-92" id="p7o-wA-Y9R"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="doneButton" destination="Eat-r1-mhz" id="um6-uV-D3M"/>
+                        <outlet property="numCardTextField" destination="zQB-b0-LN6" id="pfZ-qe-TsP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showStackedCardViewController" id="7eX-9k-Kle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofo-gB-2eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227.5" y="296.5"/>
+        </scene>
+        <!--Stacked Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StackedCardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <segue destination="Jrq-Po-Mbw" kind="show" identifier="showInitialViewController" id="EfO-pU-7lQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

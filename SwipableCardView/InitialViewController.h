@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  InitialViewController.h
 //  SwipableCardView
 //
-//  Created by Marc Nieto on 8/31/16.
+//  Created by Marc Nieto on 9/2/16.
 //  Copyright © 2016 KandidProductions. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface InitialViewController : UIViewController
 
 @end
-
