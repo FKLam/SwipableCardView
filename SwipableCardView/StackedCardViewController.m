@@ -67,12 +67,15 @@ static const CGFloat kBottomCardScale = 0.92;
         [newBottomCardView changeLabelWithValue:self.currentCardIndex + 1];
         [newBottomCardView.contentView setSwipeEnabled:NO];
         newBottomCardView.delegate = self;
-        [self.view insertSubview:newBottomCardView belowSubview:self.cards[self.currentCardIndex - 1]];
+        
         
         newBottomCardView.contentView.alpha = 0.5;
         
         if(i > 1){
             newBottomCardView.alpha = 0.0;
+        }
+        else {
+            [self.view insertSubview:newBottomCardView belowSubview:self.cards[self.currentCardIndex - 1]];
         }
         
         [self addCardToQueue:newBottomCardView];
@@ -101,6 +104,8 @@ static const CGFloat kBottomCardScale = 0.92;
     if(self.currentCardIndex < (self.numCards - 2)){
         ReusableCardView *bottomCard = self.cards[self.currentCardIndex + 1];
         ReusableCardView *secondFromBottomCard = self.cards[self.currentCardIndex + 2];
+        
+        [self.view insertSubview:secondFromBottomCard belowSubview:bottomCard];
         
         [UIView animateWithDuration:0.3 animations:^{
             
