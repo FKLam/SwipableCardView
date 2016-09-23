@@ -13,8 +13,6 @@
 		F21B6B451D7766C50095AF26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B6B431D7766C50095AF26 /* Main.storyboard */; };
 		F21B6B471D7766C50095AF26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21B6B461D7766C50095AF26 /* Assets.xcassets */; };
 		F21B6B4A1D7766C50095AF26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B6B481D7766C50095AF26 /* LaunchScreen.storyboard */; };
-		F21B6B551D7766C50095AF26 /* SwipableCardViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B6B541D7766C50095AF26 /* SwipableCardViewTests.m */; };
-		F21B6B601D7766C50095AF26 /* SwipableCardViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B6B5F1D7766C50095AF26 /* SwipableCardViewUITests.m */; };
 		F21B6B6F1D77685C0095AF26 /* ReusableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B6B6E1D77685C0095AF26 /* ReusableCardView.m */; };
 		F21B6B711D77686C0095AF26 /* ReusableCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21B6B701D77686C0095AF26 /* ReusableCardView.xib */; };
 		F21B6B741D779D330095AF26 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B6B731D779D330095AF26 /* SwipeView.m */; };
@@ -50,11 +48,7 @@
 		F21B6B491D7766C50095AF26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21B6B4B1D7766C50095AF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21B6B501D7766C50095AF26 /* SwipableCardViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipableCardViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21B6B541D7766C50095AF26 /* SwipableCardViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipableCardViewTests.m; sourceTree = "<group>"; };
-		F21B6B561D7766C50095AF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21B6B5B1D7766C50095AF26 /* SwipableCardViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipableCardViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21B6B5F1D7766C50095AF26 /* SwipableCardViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipableCardViewUITests.m; sourceTree = "<group>"; };
-		F21B6B611D7766C50095AF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21B6B6D1D77685C0095AF26 /* ReusableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableCardView.h; sourceTree = "<group>"; };
 		F21B6B6E1D77685C0095AF26 /* ReusableCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableCardView.m; sourceTree = "<group>"; };
 		F21B6B701D77686C0095AF26 /* ReusableCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableCardView.xib; sourceTree = "<group>"; };
@@ -93,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				F21B6B391D7766C50095AF26 /* SwipableCardView */,
-				F21B6B531D7766C50095AF26 /* SwipableCardViewTests */,
-				F21B6B5E1D7766C50095AF26 /* SwipableCardViewUITests */,
 				F21B6B381D7766C50095AF26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,24 +130,6 @@
 				F21B6B3B1D7766C50095AF26 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F21B6B531D7766C50095AF26 /* SwipableCardViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				F21B6B541D7766C50095AF26 /* SwipableCardViewTests.m */,
-				F21B6B561D7766C50095AF26 /* Info.plist */,
-			);
-			path = SwipableCardViewTests;
-			sourceTree = "<group>";
-		};
-		F21B6B5E1D7766C50095AF26 /* SwipableCardViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F21B6B5F1D7766C50095AF26 /* SwipableCardViewUITests.m */,
-				F21B6B611D7766C50095AF26 /* Info.plist */,
-			);
-			path = SwipableCardViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21B6B551D7766C50095AF26 /* SwipableCardViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21B6B601D7766C50095AF26 /* SwipableCardViewUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
